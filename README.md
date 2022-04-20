@@ -1,60 +1,81 @@
-_Printf Project
+#Our printf project
+Hi there, so this happens to be our first team project in the ALX SE Program and we've been tasked with building a function that is capable of printing with the %d, %c, %s, and %% specifiers to standard output. We also added %x, %X, %b, %o, %u, %r, %R, and lastly, %p formatting. 
 
-This is the repo for our take on the printf function.
+#The Supported Format Types
+TYPE - OUTPUT
 
-Description
+%c - Single character
 
-The printf function prints a format control string of different data types on the standard output, its roots are in the C programming language, it is a functional way to produce a precise output format for printing numerical values or ASCII characters from format specifiers that have been passed on in the argument.
+%s - String of character
 
-Prototype
+%d - Integer in decimal
 
-This _printf function produces output according to a format:
+%i - integer
 
-int _printf(const char *format, ...);
+%u - unsigned integer
 
-Formats
+%p - pointer address
 
-flag = function
+%% - Percent sign
 
-%c = print a single character
+%r - String in reverse
 
-%d = print a integer as a signed decimal (base 10) number
+%R - String in rot13
 
-%i = print same as "d", integer in base 10
+%x - Lowercase hex(loervase)
 
-%s = print a string
+%X - Uppercase hex (unsigned)
 
-Compilation
+%b - signed binary
 
-All .c files are necessary for compilation, code is compiled this way:
+%o - signed octal
 
-gcc -Wall -Werror -Wextra -pedantic *.c -o name_of_executable
+#Some Examples are:
+Character: printf("%c", I); Output = I
 
-Files Description
+Integer: printf("%i", 22); Output: 22
 
-The _printf function produces output according to a format:
+String: printf("%s", HELLO world.); Output = HELLO world.
 
-file = description
-
-_printf.c = Contain the main function of the _printf
-
-funct.c = Contain the content for found the specifiers of the _printf function
-
-main.h = Contain the struct and prototypes to the _printf function
-
-man_3_printf = Contain the man page of the _printf function with all its specifications
-
-print_str_cat.c = function that concatenates the buffer and the temporal string
-
-print_str_char.c = function that found a character to print with _printf function
-
-print_str_concat.c =function that concatenates the format with the buffer and update iterator of format
-
-str_integer.c = function that print and found a integer to print with _printf function
-
-strlen.c = function that gets the length of the buffer
-
-str_percent.c function that print the sign percent of the specifier format to print of _printf function
-
-str_string.c function that found a string to print with _printf function
-
+Now lets move over to our project tasks in order for us write the printf function:
+##printf Task 0
+Here, we're to write a function which gives output according to a format with the prototype of int _printf(const char *format, ...); which will return the number of characters printed (excluding the null byte used to end output to strings).
+##printf Task 1
+This task demands that we handle the following conversion specifiers: d and i.
+##printf Task 2
+Create a man page for your function.
+##printf Task 3
+In this task, we are required to handle the following custom conversion specifiers: b: the unsigned int argument is converted to binary.
+##printf Task 4
+In this task, we're asked to handle the following conversion specifiers:
+`u, o, x, X`.
+##printf Task 5
+Here, we're to use a local buffer of 1024 chars in order to call `write` as little as possible.
+##printf Task 6
+Here, we've been tasked with handling the following custom conversion specifier:
+`S`: prints the string.
+##printf Task 7
+In this task, we're to handle the following conversion specifier: `p`.
+##printf task 8
+Here, we're demanded to handle the following flag characters for non-custom conversion specifiers:
+```
+`+`
+space
+`#`
+```
+##printf task 9
+Here, we're handling the following length modifiers for non-custom conversion specifiers: `l` `h`.
+##printf task 10
+In this task, we're handling the field width for non-custom conversion specifiers.
+##printf task 11
+Handling the precision for non-custom conversion specifiers.
+##printf task 12
+handling the `0` flag character for non-custom conversion specifiers.
+##printf task 13
+Handling the `-` flag character for non-custom conversion specifiers.
+##printf task 14
+Handling the following custom conversion specifier: `r`:prints the reversed string.
+##printf task 15
+Handling the following custom sonversion specifier: `R`:prints the rot13'ed string.
+##printf task 16
+Now all the above options work together.
