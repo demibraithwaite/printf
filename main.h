@@ -1,12 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <stddef.h>
-#include <unistd.h>
-#include <limits.h>
 
 /**                                                                           
  * struct flags - struct containing flags to "turn on"                        
@@ -73,3 +69,8 @@ int print_bigS(va_list l, flags_t *f);
 
 /* print_address */
 int print_address(va_list l, flags_t *f);
+
+/* print_percent */
+int print_percent(va_list l, flags_t *f);
+
+#endif
